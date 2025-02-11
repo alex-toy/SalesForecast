@@ -25,6 +25,7 @@ List<Item> data = new()
 
 MobileAverage mobileAverage = new () { SizeWindow = 4 };
 
-var temp = mobileAverage.CalculateMovingAverage(data.Select(x => x.Amount).ToList());
+var temp = mobileAverage.GetMovingAverage(data.Select(x => x.Amount).ToList());
+var temp2 = mobileAverage.GetSeansonalCoefficients(data.Select(x => x.Amount).ToList());
 
 Console.WriteLine();
